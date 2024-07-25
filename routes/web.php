@@ -33,4 +33,5 @@ Route::get('/site/moscow', function(){
 //     return view('kazan');
 // });
 
-Route::get('/site/kazan', [App\Http\Controllers\KazanController::class, 'index'])->name('kazan');
+Route::get('/site/kazan', [App\Http\Controllers\KazanController::class, 'index'])->name('site-kazan');
+// Route::post('/admin/schemeHallStore', [App\Http\Controllers\SchemeHallController::class, 'store'])->name('admin-schemeHall.store');

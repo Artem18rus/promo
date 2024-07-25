@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 
 class KazanController extends Controller
 {
-    function index() {
+    public function index() {
         // $urlWithQuery = url()->full();
         // $route = Route::current()->getName();
         // $name = Route::currentRouteName();
@@ -18,5 +18,11 @@ class KazanController extends Controller
         // dd($name);
         // return view('kazan');
         return view('kazan', ['name' => $name]);
+    }
+
+    public function store(Request $request) {
+        $params = $request->input('status');
+        dd($params);
+        return response()->$request;
     }
 }
